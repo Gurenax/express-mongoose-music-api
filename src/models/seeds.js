@@ -6,5 +6,25 @@ Artist.find() // Find all artist documents
     console.log('Artists:', artists)
   })
   .catch( error => {
-    console.log(error)
+    console.error(error)
   })
+
+// Create artists
+// Artist.create({ name: 'Phoenix' })
+//   // When this has completed, this function will be called
+//   .then( artist => {
+//     console.log('Created artist',artist)
+//   })
+
+// Artist.create([
+//   { name: 'The Strokes' },
+//   { name: 'Arctic Monkeys' },
+//   { name: 'Death Cab for Cutie' },
+//   { name: 'Weezer' },
+//   { name: 'Metric' },
+//   { name: 'Temper Trap' }
+// ])
+// // When this has completed, this function will be called
+// .then( artist => {
+//   console.log('Created artist',artist)
+// })
