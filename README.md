@@ -1,5 +1,6 @@
 # Express Mongoose Music API
 
+## Setup
 - yard init
 - yard add express
 - yarn add nodemon
@@ -16,3 +17,10 @@ server.listen(7000, () => {
 })
 ```
 - yarn dev
+- yarn add mongoose
+
+
+## Model
+
+### Artist
+- name

@@ -7,12 +7,14 @@
   "author": "Glenn Dimaliwat <glenn.dimaliwat@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mongoose": "^4.13.4"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
   },
   "scripts": {
-    "dev": "nodemon --inspect src/server.js"
+    "dev": "nodemon src/server.js",
+    "debug": "nodemon --inspect src/server.js"
   }
 }
