@@ -23,4 +23,9 @@ server.listen(7000, () => {
 ## Model
 
 ### Artist
-- name
+- name: String
+
+
+### Todo
+- description: String
+- completed: Boolean
