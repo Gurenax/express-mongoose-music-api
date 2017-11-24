@@ -1,0 +1,41 @@
+### ALL
+GET http://localhost:7000/todos
+### 5a17aeb9a0df0ceeb7dfb46a
+GET http://localhost:7000/todos/5a17aeb9a0df0ceeb7dfb46a
+### 404
+GET http://localhost:7000/todos/5a17aeb9a0df0ceeb7dfb420
+### 400
+GET http://localhost:7000/todos/2
+### CREATE
+POST http://localhost:7000/todos
+Content-Type: application/json
+
+{
+  "description": "Test 1"
+}
+
+### UPDATE
+PATCH http://localhost:7000/todos/5a17b0ec9cc7a5f0110053c0
+Content-Type: application/json
+
+{
+  "description": "Test 2",
+  "completed": true
+}
+### UPDATE Todo Item 2
+PATCH http://localhost:7000/todos/5a17aeb9a0df0ceeb7dfb46e
+Content-Type: application/json
+
+{
+  "completed": true
+}
+### UPDATE Todo Item 5
+PATCH http://localhost:7000/todos/5a17aeb9a0df0ceeb7dfb46c
+Content-Type: application/json
+
+{
+  "completed": true
+}
+
+### DESTROY
+DELETE http://localhost:7000/todos/5a17b0ec9cc7a5f0110053c0
