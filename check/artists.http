@@ -11,7 +11,7 @@ POST http://localhost:7000/artists
 Content-Type: application/json
 
 {
-  "name": "Test"
+  "name": "Test 1"
 }
 ### UPDATE
 PATCH http://localhost:7000/artists/5a17978bb2aa56e3d489eade
@@ -22,4 +22,4 @@ Content-Type: application/json
 }
 
 ### DESTROY
-DELETE http://localhost:7000/artists/5a17978bb2aa56e3d489eade
+DELETE http://localhost:7000/artists/5a179bac333f39e54becd13c
