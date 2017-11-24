@@ -3,7 +3,7 @@ const mongoose = require('./init')
 
 // Define our model
 const Artist = mongoose.model('Artist', {
-  name: String
+  name: { type: String, required: [true, 'name required'] }
 })
 
 module.exports = Artist

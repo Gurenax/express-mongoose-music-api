@@ -41,25 +41,20 @@ router.get('/artists/:id', (req, res) => {
 // Create
 router.post('/artists', (req, res) => {
   const attributes = req.body
-  if(attributes.name) {
-    Artist.create(attributes)
-      .then(artist => {
-        res.status(201).json(artist)
-      })
-      .catch(error => {
-        res.status(400).json({ error: error })
-      })
-  }
-  else {
-    res.status(403).json({ error: 'Name is required' })
-  }
+  Artist.create(attributes)
+    .then(artist => {
+      res.status(201).json(artist)
+    })
+    .catch(error => {
+      res.status(400).json({ error: error })
+    })
 })
 
 // Update
 router.patch('/artists/:id', (req, res) => {
   const id = req.params.id
   const attributes = req.body
-  Artist.findByIdAndUpdate(id, attributes, {new: true})
+  Artist.findByIdAndUpdate(id, attributes, { new: true, runValidators: true })
     .then(artist => {
       // If an artist was found and updated
       if(artist) {
