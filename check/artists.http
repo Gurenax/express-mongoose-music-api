@@ -6,7 +6,20 @@ GET http://localhost:7000/artists/5a1768c830237dcef37d6516
 GET http://localhost:7000/artists/5a1768c830237dcef37d65ee
 ### 400
 GET http://localhost:7000/artists/1
-### ALL
-GET http://localhost:7000/artists
-### ALL
-GET http://localhost:7000/artists
+### CREATE
+POST http://localhost:7000/artists
+Content-Type: application/json
+
+{
+  "name": "Test"
+}
+### UPDATE
+PATCH http://localhost:7000/artists/5a17978bb2aa56e3d489eade
+Content-Type: application/json
+
+{
+  "name": "Spice Girls"
+}
+
+### DESTROY
+DELETE http://localhost:7000/artists/5a17978bb2aa56e3d489eade
